@@ -50,55 +50,53 @@ O foco do projeto é apoiar o trabalho docente, economizar tempo e diminuir erro
 
 ## Instalar Pela Release
 
-Baixe a versão mais recente na página de releases:
+A forma recomendada de instalar é pela página de releases do GitHub:
 
-[Baixar release mais recente](https://github.com/radoslz/lancador-notas-siaep/releases/latest)
+[Acessar a release mais recente](https://github.com/radoslz/lancador-notas-siaep/releases/latest)
 
-### Instalação rápida no Windows
-
-Copie e cole no PowerShell:
-
-```powershell
-$zip = "$env:USERPROFILE\Downloads\lancador-notas-siaep.zip"
-$pasta = "$env:USERPROFILE\Downloads\lancador-notas-siaep"
-
-Invoke-WebRequest `
-  -Uri "https://github.com/radoslz/lancador-notas-siaep/releases/latest/download/lancador-notas-siaep-v1.2.3.zip" `
-  -OutFile $zip
-
-Expand-Archive -Path $zip -DestinationPath $pasta -Force
-Start-Process "chrome.exe" "chrome://extensions/"
-```
-
-Depois, no Chrome:
-
-1. Ative o **Modo do desenvolvedor**.
-2. Clique em **Carregar sem compactação**.
-3. Selecione a pasta extraída:
+Na release mais recente, abra a área **Assets** e baixe o arquivo:
 
 ```text
-Downloads\lancador-notas-siaep
+lancador-notas-siaep-v1.2.3.zip
 ```
 
-No Edge, abra:
+Depois de baixar:
+
+1. Extraia o arquivo `.zip`.
+2. Abra a página de extensões do navegador:
+
+```text
+chrome://extensions/
+```
+
+Ou, se estiver usando Microsoft Edge:
 
 ```text
 edge://extensions/
 ```
 
-E siga o mesmo processo: **Modo do desenvolvedor** > **Carregar sem compactação**.
+3. Ative o **Modo do desenvolvedor**.
+4. Clique em **Carregar sem compactação**.
+5. Selecione a pasta extraída da release.
 
-## Instalar Clonando o Repositório
+No final, a extensão aparecerá na lista de extensões do navegador como:
 
-Se preferir usar Git:
-
-```powershell
-git clone https://github.com/radoslz/lancador-notas-siaep.git
-cd lancador-notas-siaep
-Start-Process "chrome.exe" "chrome://extensions/"
+```text
+Lançador de Notas SIAEP
 ```
 
-Depois carregue a pasta do projeto em **Carregar sem compactação**.
+## Instalar Pelo Código-Fonte
+
+Essa opção é indicada para quem deseja estudar ou modificar o projeto.
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/radoslz/lancador-notas-siaep.git
+cd lancador-notas-siaep
+```
+
+Depois abra `chrome://extensions/`, ative o **Modo do desenvolvedor** e carregue a pasta clonada em **Carregar sem compactação**.
 
 ## Como Usar
 
