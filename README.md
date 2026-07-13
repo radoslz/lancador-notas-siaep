@@ -2,8 +2,6 @@
 
 Extensão local para Chrome/Edge desenvolvida para agilizar o lançamento de notas no SIAEP a partir de planilhas, com conferência por nome do aluno e proteção contra preenchimento indevido em linhas riscadas, bloqueadas ou desativadas.
 
-Projeto desenvolvido por **Railson Doglas**.
-
 ## Objetivo
 
 O projeto foi criado para reduzir o trabalho repetitivo de copiar notas de uma planilha e digitar manualmente no sistema escolar. A extensão atua somente na página aberta pelo usuário, identifica os alunos exibidos na tabela do SIAEP, compara os nomes com os dados da planilha e preenche apenas os campos válidos.
@@ -16,29 +14,24 @@ Ela não clica em salvar automaticamente. O professor ainda confere visualmente 
 - Leitura de arquivos Excel com várias abas.
 - Detecção automática da coluna de nomes.
 - Detecção de colunas prováveis de nota, prova, avaliação, atividade ou trabalho.
-- Seleção manual da aba, coluna de nomes e coluna de nota.
 - Preenchimento da página aberta do SIAEP por comparação de nomes.
 - Comparação tolerante a acentos, maiúsculas/minúsculas e pequenas diferenças de escrita.
 - Tentativa de correspondência por palavras principais quando o nome da planilha está abreviado.
 - Identificação e bloqueio de alunos riscados, campos desativados ou campos somente leitura.
 - Destaque visual das linhas preenchidas, ignoradas ou duvidosas.
-- Persistência local da planilha processada e das escolhas da última utilização.
 - Modo manual para colar pares `nome + nota`, sem depender de arquivo.
 
 ## Por Que Foi Desenvolvido
 
-O lançamento de notas em sistemas escolares pode ser uma tarefa demorada, repetitiva e suscetível a erros de digitação. Esta extensão foi desenvolvida para automatizar a parte operacional, mantendo o controle final com o usuário.
+O lançamento de notas em sistemas escolares pode ser uma tarefa demorada, e como sempre costumo utilizar planilhas para organizar duranto o periodo de aula as notas dos alunos, acaba se tornando repetitiva e suscetível a erros de digitação essa parte de pegar da planilha e colocar no sistema. Esta extensão foi desenvolvida para automatizar a parte operacional, mantendo o controle final com o usuário.
 
 O foco do projeto é apoiar o trabalho docente, economizar tempo e diminuir erros no processo de transferência de notas da planilha para o SIAEP.
 
 ## Tecnologias Usadas
 
-- JavaScript puro.
+- JavaScript.
 - HTML e CSS.
-- Chrome Extension Manifest V3.
-- Automação de DOM no navegador.
 - Parser local de planilhas `.xlsx`.
-- Armazenamento local com `chrome.storage.local`.
 
 ## Segurança e Privacidade
 
@@ -46,9 +39,8 @@ O foco do projeto é apoiar o trabalho docente, economizar tempo e diminuir erro
 - Os dados da planilha não são enviados para servidor externo.
 - A extensão não salva as notas automaticamente no SIAEP.
 - A confirmação final continua sendo feita manualmente pelo usuário.
-- Exemplos do projeto usam dados fictícios.
 
-## Instalar Pela Release
+## Como Instalar
 
 A forma recomendada de instalar é pela página de releases do GitHub:
 
@@ -57,7 +49,7 @@ A forma recomendada de instalar é pela página de releases do GitHub:
 Na release mais recente, abra a área **Assets** e baixe o arquivo:
 
 ```text
-lancador-notas-siaep-v1.2.3.zip
+lancador-notas-siaep-v*.*.*.zip
 ```
 
 Depois de baixar:
@@ -116,33 +108,3 @@ Depois abra `chrome://extensions/`, ative o **Modo do desenvolvedor** e carregue
 - Amarelo: linha sem nota correspondente.
 - Vermelho: nome duplicado ou correspondência duvidosa.
 
-## Estrutura do Projeto
-
-```text
-lancador-notas-siaep/
-|-- manifest.json
-|-- popup.html
-|-- popup.js
-|-- styles.css
-|-- content.js
-|-- xlsx-lite.js
-|-- icon16.png
-|-- icon32.png
-|-- icon48.png
-|-- icon128.png
-|-- docs/
-|   |-- PORTFOLIO.md
-|   `-- PRIVACIDADE.md
-|-- CHANGELOG.md
-`-- README.md
-```
-
-## Resumo Para Currículo
-
-Desenvolvi uma extensão para navegador que automatiza o preenchimento de notas no SIAEP a partir de planilhas Excel, com leitura de múltiplas abas, identificação de colunas de nota, correspondência por nome do aluno, persistência local e mecanismos de segurança para evitar preenchimento em registros bloqueados.
-
-## Autor
-
-**Railson Doglas**
-
-Projeto criado para uso educacional e demonstração de automação aplicada a rotinas escolares.
