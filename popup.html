@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preencher notas</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <div class="brand">
+          <img src="icon.svg" alt="" class="brand-logo">
+          <div>
+            <h1>Lancador de Notas SIAEP</h1>
+            <p>Notas por planilha no SIAEP</p>
+          </div>
+        </div>
+      </header>
+
+      <details class="about">
+        <summary>Sobre</summary>
+        <div class="about-body">
+          <strong>Railson Doglas</strong>
+          <p>Extensao local para agilizar o lancamento de notas no SIAEP a partir de planilhas, com conferencia por nome e protecao para ignorar alunos riscados.</p>
+        </div>
+      </details>
+
+      <section class="panel">
+        <label for="arquivo">Planilha</label>
+        <input id="arquivo" class="file" type="file" accept=".xlsx,.csv,.tsv">
+        <div id="arquivoResumo" class="hint">Nenhuma planilha carregada.</div>
+
+        <div id="excelControles" class="excel hidden">
+          <div class="field">
+            <label for="planilha">Aba</label>
+            <select id="planilha"></select>
+          </div>
+
+          <div class="field">
+            <label for="colunaNome">Nomes</label>
+            <select id="colunaNome"></select>
+          </div>
+
+          <div class="field">
+            <label for="colunaNota">Nota</label>
+            <select id="colunaNota"></select>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <label for="dados">Dados manuais</label>
+        <textarea id="dados" spellcheck="false" placeholder="Nome dos Alunos	NOTA 4
+ALUNO EXEMPLO UM	9,00
+ALUNO EXEMPLO DOIS	5,00"></textarea>
+
+        <div class="actions">
+          <button id="preencher" type="button">Preencher pagina</button>
+          <button id="limpar" type="button" class="secondary">Limpar memoria</button>
+        </div>
+      </section>
+
+      <section class="status" aria-live="polite">
+        <div id="resumo" class="summary">Aguardando dados.</div>
+        <div id="detalhes" class="details"></div>
+      </section>
+    </main>
+
+    <script src="xlsx-lite.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

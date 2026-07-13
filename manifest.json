@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Lancador de Notas SIAEP",
+  "version": "1.2.3",
+  "description": "Lancador de notas por planilha para o SIAEP.",
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Lancador de Notas SIAEP"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
