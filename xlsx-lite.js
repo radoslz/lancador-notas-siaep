@@ -36,7 +36,7 @@
 
   async function inflateRaw(data) {
     if (typeof DecompressionStream === "undefined") {
-      throw new Error("Este navegador nao consegue descompactar arquivos .xlsx.");
+      throw new Error("Este navegador não consegue descompactar arquivos .xlsx.");
     }
 
     const formats = ["deflate-raw", "deflate"];
@@ -97,14 +97,14 @@
 
     async function read(name) {
       const entry = entries.get(normalizePath(name));
-      if (!entry) throw new Error(`Arquivo interno nao encontrado: ${name}`);
+      if (!entry) throw new Error(`Arquivo interno não encontrado: ${name}`);
 
       const compressed = bytes.slice(entry.dataStart, entry.dataStart + entry.compressedSize);
 
       if (entry.method === 0) return compressed;
       if (entry.method === 8) return inflateRaw(compressed);
 
-      throw new Error(`Metodo de compactacao nao suportado: ${entry.method}`);
+      throw new Error(`Método de compactação não suportado: ${entry.method}`);
     }
 
     async function text(name) {

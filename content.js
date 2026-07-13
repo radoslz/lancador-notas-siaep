@@ -79,7 +79,7 @@
     if (!linhas.length) {
       return {
         ok: false,
-        erro: "Nao encontrei linhas com campos de nota nesta pagina. Confira se a tela correta esta aberta."
+        erro: "Não encontrei linhas com campos de nota nesta página. Confira se a tela correta está aberta."
       };
     }
 

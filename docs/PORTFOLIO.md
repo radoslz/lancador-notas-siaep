@@ -1,37 +1,37 @@
-# Resumo de Portfolio
+# Resumo de Portfólio
 
 ## Projeto
 
-**Lancador de Notas SIAEP**
+**Lançador de Notas SIAEP**
 
-## Descricao curta
+## Descrição Curta
 
-Extensao para Chrome/Edge que automatiza o preenchimento de notas no SIAEP a partir de planilhas, mantendo conferencia visual e controle manual do salvamento.
+Extensão para Chrome/Edge que automatiza o preenchimento de notas no SIAEP a partir de planilhas, mantendo conferência visual e controle manual do salvamento.
 
-## Problema resolvido
+## Problema Resolvido
 
-Professores precisam transferir notas de planilhas para o sistema escolar manualmente, aluno por aluno. Esse processo e repetitivo, lento e propenso a erros de digitacao.
+Professores precisam transferir notas de planilhas para o sistema escolar manualmente, aluno por aluno. Esse processo é repetitivo, lento e propenso a erros de digitação.
 
-## Solucao desenvolvida
+## Solução Desenvolvida
 
-Foi criada uma extensao local de navegador que le planilhas, identifica colunas de nomes e notas, compara os alunos da planilha com os alunos exibidos na pagina e preenche os campos corretos no SIAEP.
+Foi criada uma extensão local de navegador que lê planilhas, identifica colunas de nomes e notas, compara os alunos da planilha com os alunos exibidos na página e preenche os campos corretos no SIAEP.
 
-## Destaques tecnicos
+## Destaques Técnicos
 
-- Extensao em Manifest V3.
+- Extensão em Manifest V3.
 - Leitura local de `.xlsx`, `.csv` e `.tsv`.
-- Parser proprio para planilhas Excel simples, sem dependencia de CDN.
-- Correspondencia de nomes com normalizacao de acentos e caixa.
+- Parser próprio para planilhas Excel simples, sem dependência de CDN.
+- Correspondência de nomes com normalização de acentos e caixa.
 - Tratamento de nomes abreviados por palavras principais.
 - Bloqueio de preenchimento em linhas riscadas, `disabled` ou `readonly`.
-- Persistencia de estado com `chrome.storage.local`.
+- Persistência de estado com `chrome.storage.local`.
 - Interface simples para selecionar aba, coluna de nomes e coluna de nota.
 
-## Competencias demonstradas
+## Competências Demonstradas
 
-- Automacao de processos.
-- Manipulacao de DOM.
+- Automação de processos.
+- Manipulação de DOM.
 - JavaScript puro.
-- Desenvolvimento de extensoes para navegador.
+- Desenvolvimento de extensões para navegador.
 - Tratamento de dados tabulares.
-- Cuidado com privacidade e validacao antes de escrita.
+- Cuidado com privacidade e validação antes de escrita.

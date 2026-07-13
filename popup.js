@@ -286,7 +286,7 @@ function renderWorkbookControls() {
     setResumo(`Pronto: ${dados.length} notas em "${analysis.headers[estado.selectedNoteIndex]}".`, "ok");
     mostrarDetalhes(dados.slice(0, 6).map(item => ({ status: "PREVIA", aluno: item.nome, nota: item.nota })));
   } else {
-    setResumo("Planilha carregada, mas nao encontrei notas validas na coluna escolhida.", "warn");
+    setResumo("Planilha carregada, mas não encontrei notas válidas na coluna escolhida.", "warn");
     detalhesEl.innerHTML = "";
   }
 }
@@ -425,7 +425,7 @@ preencherEl.addEventListener("click", async () => {
   detalhesEl.innerHTML = "";
 
   if (!dados.length) {
-    setResumo("Nao encontrei nomes e notas para preencher.", "bad");
+    setResumo("Não encontrei nomes e notas para preencher.", "bad");
     return;
   }
 
@@ -435,7 +435,7 @@ preencherEl.addEventListener("click", async () => {
     const tab = await getActiveTab();
 
     if (!tab?.id) {
-      setResumo("Nao consegui acessar a aba atual.", "bad");
+      setResumo("Não consegui acessar a aba atual.", "bad");
       return;
     }
 
@@ -447,13 +447,13 @@ preencherEl.addEventListener("click", async () => {
     });
 
     if (!resposta?.ok) {
-      setResumo(resposta?.erro || "Nao foi possivel preencher a pagina.", "bad");
+      setResumo(resposta?.erro || "Não foi possível preencher a página.", "bad");
       return;
     }
 
     const r = resposta.resumo;
     setResumo(
-      `${r.preenchidos} preenchidos, ${r.ignorados} ignorados/riscados, ${r.naoEncontrados} nao encontrados, ${r.duvidosos} duvidosos.`,
+      `${r.preenchidos} preenchidos, ${r.ignorados} ignorados/riscados, ${r.naoEncontrados} não encontrados, ${r.duvidosos} duvidosos.`,
       r.duvidosos || r.naoEncontrados ? "warn" : "ok"
     );
     mostrarDetalhes(resposta.resultado);
@@ -475,7 +475,7 @@ limparEl.addEventListener("click", () => {
   detalhesEl.innerHTML = "";
   chrome.storage.local.remove(STORAGE_KEY);
   renderWorkbookControls();
-  setResumo("Memoria limpa.");
+  setResumo("Memória limpa.");
 });
 
 chrome.storage.local.get(STORAGE_KEY, itens => {

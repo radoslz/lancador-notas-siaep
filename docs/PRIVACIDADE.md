@@ -1,21 +1,21 @@
 # Privacidade
 
-Esta extensao foi projetada para funcionar localmente no navegador.
+Esta extensão foi projetada para funcionar localmente no navegador.
 
-## O que a extensao faz
+## O Que a Extensão Faz
 
-- Le arquivos selecionados pelo usuario.
+- Lê arquivos selecionados pelo usuário.
 - Processa nomes e notas localmente.
-- Preenche campos visiveis na pagina aberta do SIAEP.
-- Salva temporariamente os dados processados no armazenamento local da extensao.
+- Preenche campos visíveis na página aberta do SIAEP.
+- Salva temporariamente os dados processados no armazenamento local da extensão.
 
-## O que a extensao nao faz
+## O Que a Extensão Não Faz
 
-- Nao envia dados para servidores externos.
-- Nao acessa banco de dados do SIAEP.
-- Nao salva notas automaticamente.
-- Nao coleta informacoes de navegacao.
+- Não envia dados para servidores externos.
+- Não acessa banco de dados do SIAEP.
+- Não salva notas automaticamente.
+- Não coleta informações de navegação.
 
-## Controle do usuario
+## Controle do Usuário
 
-O usuario deve revisar as linhas preenchidas antes de salvar qualquer alteracao no sistema escolar.
+O usuário deve revisar as linhas preenchidas antes de salvar qualquer alteração no sistema escolar.
